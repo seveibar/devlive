@@ -13,7 +13,8 @@ export const ControlledWidget = () => {
   const [expanded, setExpanded] = useState(false)
   const [hidden, setHidden] = useState(getSavedHiddenState())
 
-  if (window.d.hideIfLive && !window.d.isLive) return null
+  if ((window.d.hideIfLive || !window.d.notLiveMessage) && !window.d.isLive)
+    return null
   if (hidden) return null
 
   return (

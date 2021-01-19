@@ -10,7 +10,7 @@ Follow [@seveibar](https://twitter.com/seveibar) on twitter for updates
 
 Construct a URL like so...
 
-`https://devlive.vercel.app/api/widget?PARAM1=VALUE&PARAM2=VALUE`
+`https://devlive.vercel.app/api/widget?channel=seveibar&live_message=seveibar is live!`
 
 Here are the parameters to use:
 
@@ -19,6 +19,12 @@ Here are the parameters to use:
 | `channel`\*        | seveibar                 |
 | `live_message`     | seveibar is coding live! |
 | `not_live_message` | seveibar codes this live |
+
+Add the URL as a script tag on your web page.
+
+```html
+<script src="https://devlive.vercel.app/api/widget?channel=seveibar&live_message=seveibar is live!"></script>
+```
 
 ### Development
 

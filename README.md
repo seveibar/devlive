@@ -17,7 +17,7 @@ Here are the parameters to use:
 | Name               | Example                  |
 | ------------------ | ------------------------ |
 | `channel`\*        | seveibar                 |
-| `live_message`     | seveibar is coding live! |
+| `live_message`\*   | seveibar is coding live! |
 | `not_live_message` | seveibar codes this live |
 
 Add the URL as a script tag on your web page.

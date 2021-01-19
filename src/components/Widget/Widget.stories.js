@@ -1,4 +1,5 @@
-import React from "react"
+import React, { useState } from "react"
+import { action } from "@storybook/addon-actions"
 
 import Widget from "./"
 
@@ -8,4 +9,16 @@ export default {
   argTypes: {},
 }
 
-export const Normal = () => <Widget />
+export const Normal = () => {
+  const [expanded, setExpanded] = useState(false)
+  const [live, setLive] = useState(false)
+  return (
+    <Widget
+      isLive={live}
+      onClick={() => setLive(!live)}
+      expanded={expanded}
+      onChangeExpand={setExpanded}
+      onHide={action("onHide")}
+    />
+  )
+}

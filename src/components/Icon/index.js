@@ -2,7 +2,13 @@ import React from "react"
 
 export const Icon = ({ size, fill }) => (
   <svg
-    style={{ size, fill }}
+    style={{
+      width: size,
+      height: size,
+      fill,
+      transition: "fill 200ms",
+      stroke: "rgba(0,0,0,0.1)",
+    }}
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 20 20"
   >

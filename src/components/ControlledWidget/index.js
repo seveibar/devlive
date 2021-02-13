@@ -22,6 +22,8 @@ export const ControlledWidget = () => {
       isLive={window.d.isLive}
       liveMessage={window.d.liveMessage}
       notLiveMessage={window.d.notLiveMessage}
+      marginRight={window.d.marginRight}
+      marginBottom={window.d.marginBottom}
       expanded={expanded}
       onChangeExpand={setExpanded}
       onClick={() => {

@@ -1,8 +1,9 @@
 import React, { useCallback, useState, useEffect } from "react"
 import Icon from "../Icon"
-import styled from "styled-jss"
 import * as colors from "material-ui-colors"
 import classnames from "classnames"
+import X from "../X"
+import styled from "styled-jss"
 
 const Container = styled("div")({
   position: "fixed",
@@ -33,31 +34,13 @@ const Text = styled("div")({
   fontWeight: "bold",
 })
 
-const X = styled("div")({
-  position: "fixed",
-  right: 12,
-  bottom: 12,
-  color: "#666",
-  backgroundColor: "#fff",
-  boxShadow: "0px 3px 5px rgba(0,0,0,0.1)",
-  borderRadius: 32,
-  fontSize: 24,
-  fontWeight: "bold",
-  width: 20,
-  height: 20,
-  textAlign: "center",
-  cursor: "pointer",
-  transition: "transform 200ms",
-  "&:hover": {
-    transform: "scale(1.2,1.2)",
-  },
-})
-
 export const Widget = ({
   isLive,
   liveMessage = "seveibar is live coding!",
   notLiveMessage = "seveibar codes this live",
   expanded,
+  marginRight,
+  marginBottom,
   onChangeExpand,
   onClick,
   onHide,
@@ -92,6 +75,8 @@ export const Widget = ({
         onClick={onClick}
         className={classnames({ expanded })}
         style={{
+          marginRight,
+          marginBottom,
           backgroundColor: pulseOn ? colors.red[700] : colors.blue[700],
         }}
       >
@@ -100,9 +85,7 @@ export const Widget = ({
           {isLive ? liveMessage : notLiveMessage}
         </Text>
       </Container>
-      <X onClick={onHide}>
-        <div style={{ marginTop: -3 }}>×</div>
-      </X>
+      <X style={{ marginBottom, marginRight }} onClick={onHide} />
     </>
   )
 }

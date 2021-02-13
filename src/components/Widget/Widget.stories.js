@@ -22,3 +22,19 @@ export const Normal = () => {
     />
   )
 }
+
+export const MarginRightAndTop = () => {
+  const [expanded, setExpanded] = useState(false)
+  const [live, setLive] = useState(false)
+  return (
+    <Widget
+      isLive={live}
+      marginRight={100}
+      marginBottom={100}
+      onClick={() => setLive(!live)}
+      expanded={expanded}
+      onChangeExpand={setExpanded}
+      onHide={action("onHide")}
+    />
+  )
+}
